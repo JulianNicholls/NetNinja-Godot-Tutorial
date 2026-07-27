@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 @export var speed: int = 300
 
@@ -15,7 +15,8 @@ func _process(delta: float) -> void:
 	#print(delta)
 	
 	var direction = Input.get_vector('left', 'right', 'up', 'down')
-	position += direction * speed * delta
+	velocity = direction * speed
+	move_and_slide()
 
 #func _input(event: InputEvent) -> void:
 	#if event is InputEventKey and event.is_pressed():
