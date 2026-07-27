@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://wps0hpecyxnr"]
+
+[ext_resource type="Texture2D" uid="uid://oiugrqb73olj" path="res://assets/PNG/playerShip1_red.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://okioub41sr24" path="res://scenes/player.gd" id="1_g2els"]
+
+[node name="Player" type="Node2D" unique_id=850123184]
+script = ExtResource("1_g2els")
+
+[node name="PlayerShipImage" type="Sprite2D" parent="." unique_id=1738379516]
+texture = ExtResource("1_3vyb7")
+
+[node name="PlayerShipImage2" type="Sprite2D" parent="." unique_id=163531135]
+position = Vector2(210, 279)
+texture = ExtResource("1_3vyb7")
+
+[node name="PlayerShipImage3" type="Sprite2D" parent="." unique_id=1941116111]
+position = Vector2(120, 130)
+texture = ExtResource("1_3vyb7")
