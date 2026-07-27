@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dyys16d60e4g2" path="res://scenes/level.gd" id="1_mx8sn"]
 [ext_resource type="Texture2D" uid="uid://ba1i2dwqq4yva" path="res://assets/Backgrounds/blue.png" id="1_w8frs"]
 [ext_resource type="PackedScene" uid="uid://wps0hpecyxnr" path="res://scenes/player.tscn" id="3_ppgk2"]
-[ext_resource type="PackedScene" uid="uid://h5awh74k7677" path="res://scenes/laser.tscn" id="5_ppgk2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ci1tc"]
 size = Vector2(33, 720)
@@ -55,13 +54,13 @@ collision_layer = 4
 position = Vector2(643, 733)
 shape = SubResource("RectangleShape2D_mx8sn")
 
-[node name="Laser" parent="." unique_id=93823501 instance=ExtResource("5_ppgk2")]
-position = Vector2(487, 310)
-
-[node name="MeteorTimer" type="Timer" parent="Laser" unique_id=1417365342]
-wait_time = 0.323
-autostart = true
-
 [node name="Meteors" type="Node2D" parent="." unique_id=550661565]
 
-[connection signal="timeout" from="Laser/MeteorTimer" to="." method="_on_meteor_timer_timeout"]
+[node name="Lasers" type="Node2D" parent="." unique_id=84322488]
+
+[node name="MeteorTimer" type="Timer" parent="." unique_id=55861696]
+wait_time = 0.299
+autostart = true
+
+[connection signal="laser" from="Player" to="." method="_on_player_laser"]
+[connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]
