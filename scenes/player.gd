@@ -4,11 +4,15 @@ extends CharacterBody2D
 
 signal laser(position: Vector2)
 
+var laserReady: bool = true
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#position = Vector2(100, 500)
 	pass
 
+func _on_laser_timer_ready() -> void:
+	laserReady = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:	
@@ -17,5 +21,7 @@ func _process(delta: float) -> void:
 	move_and_slide()
 
 	# Shoot input
-	if Input.is_action_just_pressed('shoot'):
+	if laserReady and Input.is_action_just_pressed('shoot'):
+		laserReady = false
+		$LaserTimer.start(0.5)
 		laser.emit($LaserStartPos.global_position)
