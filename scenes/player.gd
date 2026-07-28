@@ -15,7 +15,7 @@ func _on_laser_timer_ready() -> void:
 	laserReady = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:	
+func _process(_delta: float) -> void:	
 	var direction = Input.get_vector('left', 'right', 'up', 'down')
 	velocity = direction * speed
 	move_and_slide()

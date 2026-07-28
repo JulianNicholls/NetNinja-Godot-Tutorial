@@ -6,6 +6,5 @@ I'm following the [Godot](https://godotengine.org/) Tutorial from NetNinja that 
 ## Assets
 
 The game assets I used are from [here](https://opengameart.org/content/space-shooter-redux).
-
-These assets were created by [Kenney.nl](www.kenney.nl) where they are also probably available from.
+They were created by [Kenney.nl](www.kenney.nl) where there are many more graphics, tools, games and starter kits.
 

@@ -14,7 +14,7 @@ texture = ExtResource("1_3vyb7")
 polygon = PackedVector2Array(-7, -38, 9, -37, 13, -11, 36, 1, 47, -6, 47, 23, 37, 24, 14, 29, 6, 39, -7, 38, -14, 29, -41, 22, -45, 25, -48, -4, -37, 2, -12, -12)
 
 [node name="LaserStartPos" type="Marker2D" parent="." unique_id=1712984876]
-position = Vector2(0, -74)
+position = Vector2(0, -43)
 
 [node name="LaserTimer" type="Timer" parent="." unique_id=1503034396]
 one_shot = true

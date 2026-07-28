@@ -12,8 +12,8 @@ func _ready() -> void:
 	$MeteorImage.texture = load(path)
 	
 	var width := get_viewport_rect().size[0]
-	var randomX = rng.randi_range(0, width)
-	var randomY = rng.randi_range(-150, -50);
+	var randomX = rng.randf_range(0, width)
+	var randomY = rng.randf_range(-150, -50);
 
 	speed = rng.randi_range(200, 500)
 	dirX = rng.randi_range(-1, 1)
