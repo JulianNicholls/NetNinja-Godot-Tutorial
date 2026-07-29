@@ -23,5 +23,5 @@ func _process(_delta: float) -> void:
 	# Shoot input
 	if laserReady and Input.is_action_just_pressed('shoot'):
 		laserReady = false
-		$LaserTimer.start(0.3)
+		$LaserTimer.start(0.25)
 		laser.emit($LaserStartPos.global_position)

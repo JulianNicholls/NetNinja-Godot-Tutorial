@@ -32,5 +32,6 @@ func _on_body_entered(_body: Node2D) -> void:
 	collision.emit()
 
 func _on_laser_entered(area: Area2D) -> void:
+	Global.score += 5
 	area.queue_free()	# Destroy current laser
 	queue_free()		# Destroy this meteor

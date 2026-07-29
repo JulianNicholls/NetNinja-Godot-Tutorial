@@ -5,8 +5,6 @@ static var life_filename := 'res://assets/PNG/UI/playerLife1_red.png'
 var time_elapsed :=0
 
 func set_health(amount: int) -> void:
-	print('set_health: ', amount)
-	
 	# remove previous ships from LifeContainer
 	for child in $MarginContainer2/LifeContainer.get_children():
 		child.queue_free()
@@ -20,6 +18,7 @@ func set_health(amount: int) -> void:
 
 func _on_game_timer_timeout() -> void:
 	time_elapsed += 1
-	Global.score = time_elapsed
-	print('Elapsed: ', time_elapsed)
-	$MarginContainer/TimeLabel.text = str(time_elapsed)
+	Global.score += 50
+
+	$MarginContainer/HBoxContainer/TimeLabel.text = str(time_elapsed)
+	$MarginContainer/HBoxContainer/ScoreLabel.text = str(Global.score)
