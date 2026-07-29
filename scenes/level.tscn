@@ -5,8 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://4wscvlpcm7en" path="res://assets/PNG/Effects/star_small.png" id="3_2r41h"]
 [ext_resource type="PackedScene" uid="uid://wps0hpecyxnr" path="res://scenes/player.tscn" id="3_ppgk2"]
 [ext_resource type="Texture2D" uid="uid://b3vvbwgqmuq3m" path="res://assets/PNG/Effects/star_tiny.png" id="4_klq6b"]
-[ext_resource type="FontFile" uid="uid://cihgbg0n5r4v7" path="res://assets/Bonus/kenvector_future.ttf" id="6_klq6b"]
-[ext_resource type="Texture2D" uid="uid://dyxd7o6sfffw5" path="res://assets/PNG/UI/playerLife1_red.png" id="7_b121j"]
+[ext_resource type="PackedScene" uid="uid://dn1vdyt00eyk8" path="res://scenes/ui.tscn" id="6_2r41h"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rgm4q"]
 animations = [{
@@ -188,63 +187,7 @@ position = Vector2(485, 377)
 [node name="Lasers" type="Node2D" parent="." unique_id=84322488]
 metadata/_edit_lock_ = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2093422068]
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1185544077]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -71.0
-offset_right = 71.0
-offset_bottom = 54.0
-grow_horizontal = 2
-theme_override_constants/margin_top = 8
-
-[node name="Label" type="Label" parent="CanvasLayer/MarginContainer" unique_id=1124706954]
-layout_mode = 2
-theme_override_colors/font_color = Color(0.43699998, 0.8987, 0.95, 1)
-theme_override_fonts/font = ExtResource("6_klq6b")
-theme_override_font_sizes/font_size = 48
-text = "1234"
-horizontal_alignment = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer" unique_id=631436475]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 189.0
-grow_vertical = 0
-theme_override_constants/margin_left = 8
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer2" unique_id=981977146]
-layout_mode = 2
-theme_override_constants/separation = 6
-
-[node name="Ship1" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer" unique_id=672979155]
-layout_mode = 2
-texture = ExtResource("7_b121j")
-stretch_mode = 2
-
-[node name="Ship2" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer" unique_id=811408418]
-layout_mode = 2
-texture = ExtResource("7_b121j")
-stretch_mode = 2
-
-[node name="Ship3" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer" unique_id=1261472767]
-layout_mode = 2
-texture = ExtResource("7_b121j")
-stretch_mode = 2
-
-[node name="Ship4" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer" unique_id=164103773]
-layout_mode = 2
-texture = ExtResource("7_b121j")
-stretch_mode = 2
-
-[node name="Ship5" type="TextureRect" parent="CanvasLayer/MarginContainer2/HBoxContainer" unique_id=1185589848]
-layout_mode = 2
-texture = ExtResource("7_b121j")
-stretch_mode = 2
+[node name="UI" parent="." unique_id=993080771 instance=ExtResource("6_2r41h")]
 
 [node name="MeteorTimer" type="Timer" parent="." unique_id=55861696]
 wait_time = 0.299

@@ -16,12 +16,12 @@ func _on_laser_timer_ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:	
-	var direction = Input.get_vector('left', 'right', 'up', 'down')
+	var direction := Input.get_vector('left', 'right', 'up', 'down')
 	velocity = direction * speed
 	move_and_slide()
 
 	# Shoot input
 	if laserReady and Input.is_action_just_pressed('shoot'):
 		laserReady = false
-		$LaserTimer.start(0.5)
+		$LaserTimer.start(0.3)
 		laser.emit($LaserStartPos.global_position)
