@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dn1vdyt00eyk8"]
 
 [ext_resource type="FontFile" uid="uid://cihgbg0n5r4v7" path="res://assets/Bonus/kenvector_future.ttf" id="1_x4jx1"]
-[ext_resource type="Texture2D" uid="uid://dyxd7o6sfffw5" path="res://assets/PNG/UI/playerLife1_red.png" id="2_yev5y"]
+[ext_resource type="Script" uid="uid://6ltvkpoycl4j" path="res://scenes/ui.gd" id="1_yev5y"]
 
-[node name="UI" type="CanvasLayer" unique_id=993080771]
+[node name="UI" type="CanvasLayer" unique_id=993080771 groups=["UI"]]
+script = ExtResource("1_yev5y")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1462143065]
 anchors_preset = 5
@@ -32,31 +33,6 @@ offset_right = 189.0
 grow_vertical = 0
 theme_override_constants/margin_left = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer2" unique_id=1843438074]
+[node name="LifeContainer" type="HBoxContainer" parent="MarginContainer2" unique_id=1843438074]
 layout_mode = 2
 theme_override_constants/separation = 6
-
-[node name="Ship1" type="TextureRect" parent="MarginContainer2/HBoxContainer" unique_id=630686899]
-layout_mode = 2
-texture = ExtResource("2_yev5y")
-stretch_mode = 2
-
-[node name="Ship2" type="TextureRect" parent="MarginContainer2/HBoxContainer" unique_id=1068926187]
-layout_mode = 2
-texture = ExtResource("2_yev5y")
-stretch_mode = 2
-
-[node name="Ship3" type="TextureRect" parent="MarginContainer2/HBoxContainer" unique_id=679671636]
-layout_mode = 2
-texture = ExtResource("2_yev5y")
-stretch_mode = 2
-
-[node name="Ship4" type="TextureRect" parent="MarginContainer2/HBoxContainer" unique_id=2076449695]
-layout_mode = 2
-texture = ExtResource("2_yev5y")
-stretch_mode = 2
-
-[node name="Ship5" type="TextureRect" parent="MarginContainer2/HBoxContainer" unique_id=250420054]
-layout_mode = 2
-texture = ExtResource("2_yev5y")
-stretch_mode = 2

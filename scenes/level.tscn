@@ -190,7 +190,7 @@ metadata/_edit_lock_ = true
 [node name="UI" parent="." unique_id=993080771 instance=ExtResource("6_2r41h")]
 
 [node name="MeteorTimer" type="Timer" parent="." unique_id=55861696]
-wait_time = 0.299
+wait_time = 0.947
 autostart = true
 
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]

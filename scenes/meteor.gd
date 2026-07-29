@@ -1,5 +1,7 @@
 extends Area2D
 
+signal collision
+
 var speed: int;
 var rot: float
 var dirX: float
@@ -25,6 +27,5 @@ func _process(delta: float) -> void:
 	position += Vector2(dirX, 1.0) * speed * delta
 	rotation += rot * delta
 		
-func _on_body_entered(body: Node2D) -> void:
-	print('Bang!') # Replace with function body.
-	print(body)
+func _on_body_entered(_body: Node2D) -> void:
+	collision.emit()
