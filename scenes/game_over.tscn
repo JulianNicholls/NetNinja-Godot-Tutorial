@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://bx13i38eaf4bv"]
 
+[ext_resource type="Script" uid="uid://cshml5rq7fa22" path="res://scenes/game_over.gd" id="1_tbwuq"]
 [ext_resource type="FontFile" uid="uid://cihgbg0n5r4v7" path="res://assets/Bonus/kenvector_future.ttf" id="1_wqhvx"]
 [ext_resource type="FontFile" uid="uid://1tnp2vgkl22y" path="res://assets/Bonus/kenvector_future_thin.ttf" id="2_tbwuq"]
 
 [node name="GameOver" type="CanvasLayer" unique_id=1627679039]
+script = ExtResource("1_tbwuq")
 
 [node name="BG" type="ColorRect" parent="." unique_id=485013929]
 offset_right = 1287.0

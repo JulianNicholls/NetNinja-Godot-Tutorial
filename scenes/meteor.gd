@@ -27,5 +27,10 @@ func _process(delta: float) -> void:
 	position += Vector2(dirX, 1.0) * speed * delta
 	rotation += rot * delta
 		
+# Collision with ship
 func _on_body_entered(_body: Node2D) -> void:
 	collision.emit()
+
+func _on_laser_entered(area: Area2D) -> void:
+	area.queue_free()	# Destroy current laser
+	queue_free()		# Destroy this meteor

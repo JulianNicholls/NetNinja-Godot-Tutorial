@@ -17,6 +17,7 @@ polygon = PackedVector2Array(-7, -38, 9, -37, 13, -11, 36, 1, 47, -6, 47, 23, 37
 position = Vector2(0, -43)
 
 [node name="LaserTimer" type="Timer" parent="." unique_id=1503034396]
+wait_time = 0.341
 one_shot = true
 
 [connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_ready"]
