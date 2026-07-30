@@ -6,6 +6,8 @@ var speed: int;
 var rot: float
 var dirX: float
 
+var can_collide := true
+
 func _ready() -> void:
 	var rng := RandomNumberGenerator.new()		
 
@@ -29,9 +31,17 @@ func _process(delta: float) -> void:
 		
 # Collision with ship
 func _on_body_entered(_body: Node2D) -> void:
-	collision.emit()
+	if can_collide:
+		collision.emit()
 
 func _on_laser_entered(area: Area2D) -> void:
-	Global.score += 5
 	area.queue_free()	# Destroy current laser
+
+	# We need to wait for the explosion to play for a bit before we delete ourzselves
+	$DestroySound.play()
+	$MeteorImage.hide()	
+	can_collide = false
+	await get_tree().create_timer(0.5).timeout
+	
+	Global.score += 5
 	queue_free()		# Destroy this meteor

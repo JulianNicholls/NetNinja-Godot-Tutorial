@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://oiugrqb73olj" path="res://assets/PNG/playerShip1_red.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://okioub41sr24" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="AudioStream" uid="uid://c1ybdu778og11" path="res://assets/Bonus/sfx_laser2.ogg" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://c5v4b0hndcg7e" path="res://assets/Bonus/Explosion.wav" id="4_dqkch"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1474618124]
 collision_mask = 6
@@ -19,5 +21,11 @@ position = Vector2(0, -43)
 [node name="LaserTimer" type="Timer" parent="." unique_id=1503034396]
 wait_time = 0.079
 one_shot = true
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="." unique_id=1394576943]
+stream = ExtResource("3_qhqgy")
+
+[node name="CollisionSound" type="AudioStreamPlayer2D" parent="." unique_id=794309892]
+stream = ExtResource("4_dqkch")
 
 [connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_ready"]
