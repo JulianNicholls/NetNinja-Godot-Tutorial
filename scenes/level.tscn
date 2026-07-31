@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://wps0hpecyxnr" path="res://scenes/player.tscn" id="3_ppgk2"]
 [ext_resource type="Texture2D" uid="uid://b3vvbwgqmuq3m" path="res://assets/PNG/Effects/star_tiny.png" id="4_klq6b"]
 [ext_resource type="PackedScene" uid="uid://dn1vdyt00eyk8" path="res://scenes/ui.tscn" id="6_2r41h"]
+[ext_resource type="AudioStream" uid="uid://cijjyuml0o1nt" path="res://assets/Bonus/game-music.wav" id="7_klq6b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rgm4q"]
 animations = [{
@@ -192,6 +193,11 @@ metadata/_edit_lock_ = true
 [node name="MeteorTimer" type="Timer" parent="." unique_id=55861696]
 wait_time = 0.439
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=248834373]
+stream = ExtResource("7_klq6b")
+volume_db = -15.232
+autoplay = true
 
 [connection signal="laser" from="Player" to="." method="_on_player_laser"]
 [connection signal="timeout" from="MeteorTimer" to="." method="_on_meteor_timer_timeout"]

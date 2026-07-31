@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cshml5rq7fa22" path="res://scenes/game_over.gd" id="1_tbwuq"]
 [ext_resource type="FontFile" uid="uid://cihgbg0n5r4v7" path="res://assets/Bonus/kenvector_future.ttf" id="1_wqhvx"]
 [ext_resource type="FontFile" uid="uid://1tnp2vgkl22y" path="res://assets/Bonus/kenvector_future_thin.ttf" id="2_tbwuq"]
+[ext_resource type="AudioStream" uid="uid://cxqexjifs4pmd" path="res://assets/Bonus/end-music.wav" id="4_racf3"]
 
 [node name="GameOver" type="CanvasLayer" unique_id=1627679039]
 script = ExtResource("1_tbwuq")
@@ -56,3 +57,8 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tbwuq")
 text = "press  R  to start again"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1631214028]
+stream = ExtResource("4_racf3")
+volume_db = -19.434
+autoplay = true
