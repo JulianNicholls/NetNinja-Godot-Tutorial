@@ -3,6 +3,8 @@
 I'm following the [Godot](https://godotengine.org/) Tutorial from NetNinja that starts 
 [here](https://www.youtube.com/watch?v=q7wlSvt0JIc&pp=0gcJCaMLAYcqIYzv).
 
+I've now completed the tutorial, so there may be no more updates here.
+
 ## Assets
 
 The game assets I used are from [here](https://opengameart.org/content/space-shooter-redux).

@@ -41,7 +41,7 @@ func _on_laser_entered(area: Area2D) -> void:
 	$DestroySound.play()
 	$MeteorImage.hide()	
 	can_collide = false
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.75).timeout
 	
 	Global.score += 5
 	queue_free()		# Destroy this meteor

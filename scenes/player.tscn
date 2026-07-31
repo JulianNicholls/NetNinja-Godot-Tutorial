@@ -5,9 +5,24 @@
 [ext_resource type="AudioStream" uid="uid://c1ybdu778og11" path="res://assets/Bonus/sfx_laser2.ogg" id="3_qhqgy"]
 [ext_resource type="AudioStream" uid="uid://c5v4b0hndcg7e" path="res://assets/Bonus/Explosion.wav" id="4_dqkch"]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rgm4q"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 12.16
+gravity = Vector3(0, 200, 0)
+scale_max = 4.3399997
+scale_over_velocity_max = 30.099998
+color = Color(1, 0.13999999, 0.13999999, 1)
+
 [node name="Player" type="CharacterBody2D" unique_id=1474618124]
 collision_mask = 6
 script = ExtResource("1_g2els")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=728897211]
+position = Vector2(1, 33)
+amount = 10
+lifetime = 0.38
+process_material = SubResource("ParticleProcessMaterial_rgm4q")
 
 [node name="PlayerShipImage" type="Sprite2D" parent="." unique_id=1738379516]
 texture = ExtResource("1_3vyb7")

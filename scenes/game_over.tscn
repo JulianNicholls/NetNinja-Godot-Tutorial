@@ -58,7 +58,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tbwuq")
 text = "press  R  to start again"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1631214028]
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1631214028]
 stream = ExtResource("4_racf3")
 volume_db = -19.434
 autoplay = true
